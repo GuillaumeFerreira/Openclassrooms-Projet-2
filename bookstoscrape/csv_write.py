@@ -1,9 +1,10 @@
-# coding: utf8
 from download_url import download_url_img
 import csv
 import os
 
 
+#Fonction qui permet l 'ecriture du fichier csv à partir
+# des objets livre
 def ecriture_csv(liste_livre, repertoire):
 
     # On créé le dossier 'images' pour la catégorie
@@ -11,7 +12,8 @@ def ecriture_csv(liste_livre, repertoire):
         os.makedirs(repertoire + "/images")
 
     with open(
-        repertoire + "/bookstoscrape.csv", "w", newline="", encoding="utf-8-sig"
+        repertoire + "/bookstoscrape.csv", "w", newline="",
+            encoding="utf-8-sig"
     ) as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=";")
         spamwriter.writerow(
@@ -45,4 +47,6 @@ def ecriture_csv(liste_livre, repertoire):
             )
 
             # On profite de la boucle pour telecharger l image
-            download_url_img(livre.image_url, livre.name_img, repertoire + "/images")
+            download_url_img(livre.image_url,
+                             livre.name_img,
+                             repertoire + "/images")

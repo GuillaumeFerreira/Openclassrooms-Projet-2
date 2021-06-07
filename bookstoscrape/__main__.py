@@ -1,4 +1,3 @@
-# coding: utf8
 from livre import lister_livre
 from csv_write import ecriture_csv
 
@@ -9,7 +8,7 @@ def run():
     dico_cat = lister_livre()
 
     for cat, liste_livre in dico_cat.items():
-        cat = "resultat/" + cat.replace(" ", "").replace("\n", "")
+        cat = "resultat/" + cat.strip()
         if not os.path.exists(cat):
             os.makedirs(cat)
 

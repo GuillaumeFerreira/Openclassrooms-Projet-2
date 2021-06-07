@@ -3,7 +3,7 @@ import csv
 import os
 
 
-#Fonction qui permet l 'ecriture du fichier csv à partir
+# Fonction qui permet l 'ecriture du fichier csv à partir
 # des objets livre
 def ecriture_csv(liste_livre, repertoire):
 

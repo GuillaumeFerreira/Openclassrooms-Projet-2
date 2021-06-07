@@ -4,7 +4,7 @@ from category import recup_categorie, recup_lien_livre, nb_page
 from constants import URL
 
 
-#Objet Livre qui permet de récupèrer les caractéristique des livres
+# Objet Livre qui permet de récupèrer les caractéristique des livres
 # et de leurs pages de présentation
 class Livre:
     def __init__(self, lien, cat):
@@ -43,7 +43,7 @@ class Livre:
         self.name_img = img[0]["src"][6:]
 
 
-#Fonction qui retoune la liste des objets livre
+# Fonction qui retoune la liste des objets livre
 def lister_livre():
 
     dico_cat = {}

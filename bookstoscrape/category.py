@@ -2,8 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 from constants import URL
 
-#Fonction qui retourne un dictionnaire avec pour clé le nom de la catégorie
-#et pour valeur le lien de la catégorie
+
+# Fonction qui retourne un dictionnaire avec pour clé le nom de la catégorie
+# et pour valeur le lien de la catégorie
 def recup_categorie():
     # On récupère le code de la page web pour ensuite le
     # traite avec beautifulsoup
@@ -24,7 +25,7 @@ def recup_categorie():
     return dico_categorie
 
 
-#Fonction qui permet de récupérer une liste de lien pour une catégorie
+# Fonction qui permet de récupérer une liste de lien pour une catégorie
 def recup_lien_livre(lien, nb):
     liste_lien_livre = []
     for i in range(1, nb + 1):
@@ -45,7 +46,7 @@ def recup_lien_livre(lien, nb):
     return liste_lien_livre
 
 
-#Fonction qui permet de compter le nombre de page d'une catégorie
+# Fonction qui permet de compter le nombre de page d'une catégorie
 def nb_page(lien):
     # On récupère le code de la page web pour ensuite le
     # traite avec beautifulsoup
